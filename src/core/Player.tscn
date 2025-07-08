@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvtw2s8veyg7b"]
+
+[ext_resource type="Script" uid="uid://d4jguthp0qy5a" path="res://src/core/player.gd" id="1_dymoa"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_whp06"]
+
+[node name="Player" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_dymoa")
+
+[node name="MainCamera" type="Camera3D" parent="Player"]
+
+[node name="InteractionRay" type="RayCast3D" parent="Player"]
+target_position = Vector3(0, 0, -1.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_whp06")
