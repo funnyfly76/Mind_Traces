@@ -11,8 +11,10 @@ script = ExtResource("1_dymoa")
 
 [node name="MainCamera" type="Camera3D" parent="Player"]
 
-[node name="InteractionRay" type="RayCast3D" parent="Player"]
-target_position = Vector3(0, 0, -1.5)
+[node name="InteractionRay" type="RayCast3D" parent="Player/MainCamera"]
+target_position = Vector3(0, 0, -3)
+collide_with_areas = true
+collide_with_bodies = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_whp06")
